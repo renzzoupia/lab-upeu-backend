@@ -1,0 +1,82 @@
+ERROR - 2024-06-01 23:27:33 --> mysqli_sql_exception: Unknown column 'u.usua_labo_id' in 'on clause' in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\app\Models\UsuarioModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lab-backend\app\Controllers\Usuario.php(11): App\Models\UsuarioModel->getUsuario()
+#6 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Usuario->index()
+#7 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-06-01 23:27:33 --> Unknown column 'u.usua_labo_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `usuario` `u`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `u`.`usua_labo_id`
+JOIN `roles` `r` ON `r`.`role_id` = `u`.`usua_role_id`
+WHERE `u`.`usua_estado` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuario` `u`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `u`.`usua_labo_id`
+JOIN `roles` `r` ON `r`.`role_id` = `u`.`usua_role_id`
+WHERE `u`.`usua_estado` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuario` `u`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `u`.`usua_labo_id`
+JOIN `roles` `r` ON `r`.`role_id` = `u`.`usua_role_id`
+WHERE `u`.`usua_estado` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuario` `u`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `u`.`usua_labo_id`
+JOIN `roles` `r` ON `r`.`role_id` = `u`.`usua_role_id`
+WHERE `u`.`usua_estado` = :u.usua_estado:', [...], false)
+ 5 APPPATH\Models\UsuarioModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Usuario.php(11): App\Models\UsuarioModel->getUsuario()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-01 23:31:23 --> mysqli_sql_exception: Unknown column 'p.prod_labo_id' in 'on clause' in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\app\Models\ProductoModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lab-backend\app\Controllers\Producto.php(20): App\Models\ProductoModel->getProducto()
+#6 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Producto->index()
+#7 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-06-01 23:31:23 --> Unknown column 'p.prod_labo_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `producto` `p`
+JOIN `tipo_producto` `tp` ON `tp`.`tipr_id` = `p`.`prod_tipr_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `p`.`prod_labo_id`
+WHERE `p`.`prod_estado` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `producto` `p`
+JOIN `tipo_producto` `tp` ON `tp`.`tipr_id` = `p`.`prod_tipr_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `p`.`prod_labo_id`
+WHERE `p`.`prod_estado` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `producto` `p`
+JOIN `tipo_producto` `tp` ON `tp`.`tipr_id` = `p`.`prod_tipr_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `p`.`prod_labo_id`
+WHERE `p`.`prod_estado` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `producto` `p`
+JOIN `tipo_producto` `tp` ON `tp`.`tipr_id` = `p`.`prod_tipr_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `p`.`prod_labo_id`
+WHERE `p`.`prod_estado` = :p.prod_estado:', [...], false)
+ 5 APPPATH\Models\ProductoModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Producto.php(20): App\Models\ProductoModel->getProducto()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Producto->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

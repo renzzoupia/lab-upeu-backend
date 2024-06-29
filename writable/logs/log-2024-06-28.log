@@ -1,0 +1,237 @@
+ERROR - 2024-06-28 11:22:01 --> Errores de validación: {"pres_inve_id":"The pres_inve_id field is required.","pres_usua_id":"The pres_usua_id field is required.","pres_cantidad":"The pres_cantidad field is required.","pres_codigouni_alumno":"The pres_codigouni_alumno field is required.","pres_fechasolicitud":"The pres_fechasolicitud field is required.","pres_fechaentregado":"The pres_fechaentregado field is required.","pres_fechadevolucion":"The pres_fechadevolucion field is required.","pres_fecharealdevolucion":"The pres_fecharealdevolucion field is required.","pres_observacion":"The pres_observacion field is required.","pres_estado":"The pres_estado field is required."}
+ERROR - 2024-06-28 11:22:02 --> Errores de validación: {"pres_inve_id":"The pres_inve_id field is required.","pres_usua_id":"The pres_usua_id field is required.","pres_cantidad":"The pres_cantidad field is required.","pres_codigouni_alumno":"The pres_codigouni_alumno field is required.","pres_fechasolicitud":"The pres_fechasolicitud field is required.","pres_fechaentregado":"The pres_fechaentregado field is required.","pres_fechadevolucion":"The pres_fechadevolucion field is required.","pres_fecharealdevolucion":"The pres_fecharealdevolucion field is required.","pres_observacion":"The pres_observacion field is required.","pres_estado":"The pres_estado field is required."}
+ERROR - 2024-06-28 11:22:03 --> Errores de validación: {"pres_inve_id":"The pres_inve_id field is required.","pres_usua_id":"The pres_usua_id field is required.","pres_cantidad":"The pres_cantidad field is required.","pres_codigouni_alumno":"The pres_codigouni_alumno field is required.","pres_fechasolicitud":"The pres_fechasolicitud field is required.","pres_fechaentregado":"The pres_fechaentregado field is required.","pres_fechadevolucion":"The pres_fechadevolucion field is required.","pres_fecharealdevolucion":"The pres_fecharealdevolucion field is required.","pres_observacion":"The pres_observacion field is required.","pres_estado":"The pres_estado field is required."}
+ERROR - 2024-06-28 11:22:06 --> Errores de validación: {"pres_inve_id":"The pres_inve_id field is required.","pres_usua_id":"The pres_usua_id field is required.","pres_cantidad":"The pres_cantidad field is required.","pres_codigouni_alumno":"The pres_codigouni_alumno field is required.","pres_fechasolicitud":"The pres_fechasolicitud field is required.","pres_fechaentregado":"The pres_fechaentregado field is required.","pres_fechadevolucion":"The pres_fechadevolucion field is required.","pres_fecharealdevolucion":"The pres_fecharealdevolucion field is required.","pres_observacion":"The pres_observacion field is required.","pres_estado":"The pres_estado field is required."}
+ERROR - 2024-06-28 11:22:07 --> Errores de validación: {"pres_inve_id":"The pres_inve_id field is required.","pres_usua_id":"The pres_usua_id field is required.","pres_cantidad":"The pres_cantidad field is required.","pres_codigouni_alumno":"The pres_codigouni_alumno field is required.","pres_fechasolicitud":"The pres_fechasolicitud field is required.","pres_fechaentregado":"The pres_fechaentregado field is required.","pres_fechadevolucion":"The pres_fechadevolucion field is required.","pres_fecharealdevolucion":"The pres_fecharealdevolucion field is required.","pres_observacion":"The pres_observacion field is required.","pres_estado":"The pres_estado field is required."}
+ERROR - 2024-06-28 11:22:17 --> Errores de validación: {"pres_inve_id":"The pres_inve_id field is required.","pres_usua_id":"The pres_usua_id field is required.","pres_cantidad":"The pres_cantidad field is required.","pres_codigouni_alumno":"The pres_codigouni_alumno field is required.","pres_fechasolicitud":"The pres_fechasolicitud field is required.","pres_fechaentregado":"The pres_fechaentregado field is required.","pres_fechadevolucion":"The pres_fechadevolucion field is required.","pres_fecharealdevolucion":"The pres_fecharealdevolucion field is required.","pres_observacion":"The pres_observacion field is required.","pres_estado":"The pres_estado field is required."}
+ERROR - 2024-06-28 11:29:27 --> mysqli_sql_exception: Unknown column 'usua_estado' in 'where clause' in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\lab-backend\app\Controllers\Prestamo.php(344): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-06-28 11:29:27 --> Unknown column 'usua_estado' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `prestamo`
+WHERE `usua_estado` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prestamo`
+WHERE `usua_estado` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prestamo`
+WHERE `usua_estado` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prestamo`
+WHERE `usua_estado` = :usua_estado:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Prestamo.php(344): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-28 11:29:42 --> mysqli_sql_exception: Unknown column 'usua_estado' in 'where clause' in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\lab-backend\app\Controllers\Prestamo.php(344): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-06-28 11:29:42 --> Unknown column 'usua_estado' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `prestamo`
+WHERE `usua_estado` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prestamo`
+WHERE `usua_estado` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prestamo`
+WHERE `usua_estado` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prestamo`
+WHERE `usua_estado` = :usua_estado:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Prestamo.php(344): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-28 11:30:19 --> Undefined index: usua_user_secreto
+in APPPATH\Controllers\Prestamo.php on line 353.
+ 1 APPPATH\Controllers\Prestamo.php(353): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: usua_user_secreto', 'C:\\xampp\\htdocs\\lab-backend\\app\\Controllers\\Prestamo.php', 353, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-28 11:33:15 --> Call to a member function isValid() on null
+in APPPATH\Controllers\Prestamo.php on line 373.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-28 11:36:55 --> Call to a member function isValid() on null
+in APPPATH\Controllers\Prestamo.php on line 372.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-28 11:48:36 --> Call to a member function isValid() on null
+in APPPATH\Controllers\Prestamo.php on line 258.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-28 11:48:43 --> Call to a member function isValid() on null
+in APPPATH\Controllers\Prestamo.php on line 258.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-28 12:04:49 --> Call to a member function isValid() on null
+in APPPATH\Controllers\Prestamo.php on line 258.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-28 12:06:24 --> Call to a member function isValid() on null
+in APPPATH\Controllers\Prestamo.php on line 258.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-28 12:07:31 --> Undefined variable: logo
+in APPPATH\Controllers\Prestamo.php on line 259.
+ 1 APPPATH\Controllers\Prestamo.php(259): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: logo', 'C:\\xampp\\htdocs\\lab-backend\\app\\Controllers\\Prestamo.php', 259, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-28 12:08:25 --> Call to a member function isValid() on null
+in APPPATH\Controllers\Prestamo.php on line 260.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-28 12:09:18 --> Call to a member function hasMoved() on null
+in APPPATH\Controllers\Prestamo.php on line 260.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-28 12:09:26 --> Call to a member function isValid() on null
+in APPPATH\Controllers\Prestamo.php on line 260.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-28 12:10:29 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`prestamo`, CONSTRAINT `prestamo_ibfk_1` FOREIGN KEY (`pres_inve_id`) REFERENCES `inventario` (`inve_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `prestam...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestam...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestam...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `prestam...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\Prestamo.php(277): CodeIgniter\Model->update('6', Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-28 12:10:29 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`prestamo`, CONSTRAINT `prestamo_ibfk_1` FOREIGN KEY (`pres_inve_id`) REFERENCES `inventario` (`inve_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `prestamo` SET `pres_inve_id` = :pres_inve_id:, `pres_usua_id` = :pres_usua_id:, `pres_cantidad` = :pres_cantidad:, `pres_codigouni_alumno` = :pres_codigouni_alumno:, `pres_fechasolicitud` = :pres_fechasolicitud:, `pres_fechaentregado` = :pres_fechaentregado:, `pres_fechadevolucion` = :pres_fechadevolucion:
+WHERE `prestamo`.`pres_id` IN :prestamo.pres_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Prestamo.php(277): CodeIgniter\Model->update('6', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-28 12:55:37 --> Comenzando el método update con id: 6
+INFO - 2024-06-28 12:55:37 --> Verificando headers de autorización
+INFO - 2024-06-28 12:55:37 --> Autorización verificada correctamente
+INFO - 2024-06-28 12:55:37 --> Datos recibidos: {"php:\/\/input":""}
+INFO - 2024-06-28 12:55:37 --> Archivo recibido: No se recibió archivo
+ERROR - 2024-06-28 12:55:37 --> Errores de validación: {"pres_inve_id":"The pres_inve_id field is required.","pres_usua_id":"The pres_usua_id field is required.","pres_cantidad":"The pres_cantidad field is required.","pres_codigouni_alumno":"The pres_codigouni_alumno field is required.","pres_fechasolicitud":"The pres_fechasolicitud field is required.","pres_fechaentregado":"The pres_fechaentregado field is required.","pres_fechadevolucion":"The pres_fechadevolucion field is required.","pres_fecharealdevolucion":"The pres_fecharealdevolucion field is required.","pres_observacion":"The pres_observacion field is required.","pres_estado":"The pres_estado field is required."}
+INFO - 2024-06-28 12:56:47 --> Comenzando el método update con id: 6
+INFO - 2024-06-28 12:56:47 --> Verificando headers de autorización
+INFO - 2024-06-28 12:56:47 --> Autorización verificada correctamente
+INFO - 2024-06-28 12:56:47 --> Datos recibidos: {"php:\/\/input":""}
+INFO - 2024-06-28 12:56:47 --> Archivo recibido: No se recibió archivo
+ERROR - 2024-06-28 12:56:47 --> Errores de validación: {"pres_inve_id":"The pres_inve_id field is required.","pres_usua_id":"The pres_usua_id field is required.","pres_cantidad":"The pres_cantidad field is required.","pres_codigouni_alumno":"The pres_codigouni_alumno field is required.","pres_fechasolicitud":"The pres_fechasolicitud field is required.","pres_fechaentregado":"The pres_fechaentregado field is required.","pres_fechadevolucion":"The pres_fechadevolucion field is required.","pres_fecharealdevolucion":"The pres_fecharealdevolucion field is required.","pres_observacion":"The pres_observacion field is required.","pres_estado":"The pres_estado field is required."}
+CRITICAL - 2024-06-28 17:04:29 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Prestamo.php on line 144.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-28 17:04:35 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Prestamo.php on line 144.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-28 17:04:48 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Prestamo.php on line 144.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-28 17:05:46 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Prestamo.php on line 144.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-28 17:06:16 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Prestamo.php on line 144.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-28 17:06:43 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Prestamo.php on line 144.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-28 17:06:46 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Prestamo.php on line 144.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-28 17:12:15 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Prestamo.php on line 359.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('17')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

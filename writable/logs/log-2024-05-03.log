@@ -1,0 +1,341 @@
+ERROR - 2024-05-03 02:07:39 --> mysqli_sql_exception: Unknown column 'tp.prod_id' in 'on clause' in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\app\Models\PrestamoModel.php(24): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lab-backend\app\Controllers\Prestamo.php(20): App\Models\PrestamoModel->getPrestamo()
+#6 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Prestamo->index()
+#7 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-05-03 02:07:39 --> Unknown column 'tp.prod_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `prestamo` `p`
+JOIN `producto` `pr` ON `tp`.`prod_id` = `p`.`pres_prod_id`
+JOIN `usuario` `u` ON `tp`.`usua_id` = `p`.`pres_usua_id`
+JOIN `laboratorio` `l` ON `tp`.`labo_id` = `p`.`pres_labo_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prestamo` `p`
+JOIN `producto` `pr` ON `tp`.`prod_id` = `p`.`pres_prod_id`
+JOIN `usuario` `u` ON `tp`.`usua_id` = `p`.`pres_usua_id`
+JOIN `laboratorio` `l` ON `tp`.`labo_id` = `p`.`pres_labo_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prestamo` `p`
+JOIN `producto` `pr` ON `tp`.`prod_id` = `p`.`pres_prod_id`
+JOIN `usuario` `u` ON `tp`.`usua_id` = `p`.`pres_usua_id`
+JOIN `laboratorio` `l` ON `tp`.`labo_id` = `p`.`pres_labo_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prestamo` `p`
+JOIN `producto` `pr` ON `tp`.`prod_id` = `p`.`pres_prod_id`
+JOIN `usuario` `u` ON `tp`.`usua_id` = `p`.`pres_usua_id`
+JOIN `laboratorio` `l` ON `tp`.`labo_id` = `p`.`pres_labo_id`', [], false)
+ 5 APPPATH\Models\PrestamoModel.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Prestamo.php(20): App\Models\PrestamoModel->getPrestamo()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-03 03:00:41 --> mysqli_sql_exception: Unknown column 'tp.tipr_id' in 'on clause' in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\app\Models\InventarioModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lab-backend\app\Controllers\Inventario.php(20): App\Models\InventarioModel->getInventario()
+#6 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Inventario->index()
+#7 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventario))
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-05-03 03:00:41 --> Unknown column 'tp.tipr_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `tp`.`tipr_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `tp`.`tipr_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `tp`.`tipr_id` = `i`.`inve_labo_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `tp`.`tipr_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `tp`.`tipr_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `tp`.`tipr_id` = `i`.`inve_labo_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `tp`.`tipr_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `tp`.`tipr_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `tp`.`tipr_id` = `i`.`inve_labo_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `tp`.`tipr_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `tp`.`tipr_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `tp`.`tipr_id` = `i`.`inve_labo_id`', [], false)
+ 5 APPPATH\Models\InventarioModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Inventario.php(20): App\Models\InventarioModel->getInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Inventario->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventario))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-03 03:45:11 --> mysqli_sql_exception: Unknown column 'tp.tipr_id' in 'on clause' in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\app\Models\InventarioModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lab-backend\app\Controllers\Inventario.php(64): App\Models\InventarioModel->getId('1')
+#6 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Inventario->show('1')
+#7 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventario))
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-05-03 03:45:11 --> Unknown column 'tp.tipr_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `producto` `p`
+JOIN `producto` `pr` ON `tp`.`tipr_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `tp`.`tipr_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `tp`.`tipr_id` = `i`.`inve_labo_id`
+WHERE `p`.`prod_id` = \'1\'
+AND `p`.`prod_estado` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `producto` `p`
+JOIN `producto` `pr` ON `tp`.`tipr_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `tp`.`tipr_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `tp`.`tipr_id` = `i`.`inve_labo_id`
+WHERE `p`.`prod_id` = \'1\'
+AND `p`.`prod_estado` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `producto` `p`
+JOIN `producto` `pr` ON `tp`.`tipr_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `tp`.`tipr_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `tp`.`tipr_id` = `i`.`inve_labo_id`
+WHERE `p`.`prod_id` = \'1\'
+AND `p`.`prod_estado` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `producto` `p`
+JOIN `producto` `pr` ON `tp`.`tipr_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `tp`.`tipr_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `tp`.`tipr_id` = `i`.`inve_labo_id`
+WHERE `p`.`prod_id` = :p.prod_id:
+AND `p`.`prod_estado` = :p.prod_estado:', [...], false)
+ 5 APPPATH\Models\InventarioModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Inventario.php(64): App\Models\InventarioModel->getId('1')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Inventario->show('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventario))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-03 03:45:52 --> mysqli_sql_exception: Unknown column 'i.inve_prod_id' in 'on clause' in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\app\Models\InventarioModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lab-backend\app\Controllers\Inventario.php(64): App\Models\InventarioModel->getId('1')
+#6 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Inventario->show('1')
+#7 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventario))
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-05-03 03:45:52 --> Unknown column 'i.inve_prod_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `producto` `p`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`
+WHERE `p`.`prod_id` = \'1\'
+AND `p`.`prod_estado` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `producto` `p`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`
+WHERE `p`.`prod_id` = \'1\'
+AND `p`.`prod_estado` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `producto` `p`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`
+WHERE `p`.`prod_id` = \'1\'
+AND `p`.`prod_estado` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `producto` `p`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`
+WHERE `p`.`prod_id` = :p.prod_id:
+AND `p`.`prod_estado` = :p.prod_estado:', [...], false)
+ 5 APPPATH\Models\InventarioModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Inventario.php(64): App\Models\InventarioModel->getId('1')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Inventario->show('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventario))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-03 03:46:03 --> mysqli_sql_exception: Unknown column 'p.prod_id' in 'where clause' in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\app\Models\InventarioModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lab-backend\app\Controllers\Inventario.php(64): App\Models\InventarioModel->getId('1')
+#6 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Inventario->show('1')
+#7 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventario))
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-05-03 03:46:03 --> Unknown column 'p.prod_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`
+WHERE `p`.`prod_id` = \'1\'
+AND `p`.`prod_estado` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`
+WHERE `p`.`prod_id` = \'1\'
+AND `p`.`prod_estado` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`
+WHERE `p`.`prod_id` = \'1\'
+AND `p`.`prod_estado` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`
+WHERE `p`.`prod_id` = :p.prod_id:
+AND `p`.`prod_estado` = :p.prod_estado:', [...], false)
+ 5 APPPATH\Models\InventarioModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Inventario.php(64): App\Models\InventarioModel->getId('1')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Inventario->show('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventario))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-03 03:59:59 --> "datetime" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 320.
+ 1 SYSTEMPATH\Validation\Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('datetime')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('mant_fechainicio', 'mant_fechainicio', '2024-04-25 05:31:50', [...], [...])
+ 3 APPPATH\Controllers\Mantenimiento.php(120): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Mantenimiento->create()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mantenimiento))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-03 04:00:09 --> "datetime" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 320.
+ 1 SYSTEMPATH\Validation\Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('datetime')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('mant_fechainicio', 'mant_fechainicio', '2024-04-25 05:31:50', [...], [...])
+ 3 APPPATH\Controllers\Mantenimiento.php(120): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Mantenimiento->create()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mantenimiento))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-03 04:04:36 --> Undefined index: prod_foto
+in APPPATH\Controllers\Producto.php on line 113.
+ 1 APPPATH\Controllers\Producto.php(113): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: prod_foto', 'C:\\xampp\\htdocs\\lab-backend\\app\\Controllers\\Producto.php', 113, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Producto->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-03 04:07:48 --> Undefined index: prod_descripcion
+in APPPATH\Controllers\Producto.php on line 135.
+ 1 APPPATH\Controllers\Producto.php(135): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: prod_descripcion', 'C:\\xampp\\htdocs\\lab-backend\\app\\Controllers\\Producto.php', 135, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Producto->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-03 04:08:38 --> mysqli_sql_exception: Column 'prod_tipr_id' cannot be null in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\Producto.php(141): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Producto->create()
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-05-03 04:08:38 --> Column 'prod_tipr_id' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `producto` (`prod_nombre`, `prod_stock`, `prod_codigoinventario`, `prod_labo_id`, `prod_prestamo`, `prod_tipr_id`) VALUES (\'Cable utp\', \'500\', \'123123\', \'1\', \'1\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `producto` (`prod_nombre`, `prod_stock`, `prod_codigoinventario`, `prod_labo_id`, `prod_prestamo`, `prod_tipr_id`) VALUES (\'Cable utp\', \'500\', \'123123\', \'1\', \'1\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `producto` (`prod_nombre`, `prod_stock`, `prod_codigoinventario`, `prod_labo_id`, `prod_prestamo`, `prod_tipr_id`) VALUES (\'Cable utp\', \'500\', \'123123\', \'1\', \'1\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`prod_nombre`, `prod_stock`, `prod_codigoinventario`, `prod_labo_id`, `prod_prestamo`, `prod_tipr_id`) VALUES (:prod_nombre:, :prod_stock:, :prod_codigoinventario:, :prod_labo_id:, :prod_prestamo:, :prod_tipr_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Producto.php(141): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Producto->create()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-03 04:11:13 --> Undefined index: prod_foto
+in APPPATH\Controllers\Prestamo.php on line 114.
+ 1 APPPATH\Controllers\Prestamo.php(114): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: prod_foto', 'C:\\xampp\\htdocs\\lab-backend\\app\\Controllers\\Prestamo.php', 114, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-03 04:13:16 --> Undefined index: prod_foto
+in APPPATH\Controllers\Prestamo.php on line 114.
+ 1 APPPATH\Controllers\Prestamo.php(114): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: prod_foto', 'C:\\xampp\\htdocs\\lab-backend\\app\\Controllers\\Prestamo.php', 114, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-03 04:13:27 --> Undefined index: prod_foto
+in APPPATH\Controllers\Prestamo.php on line 114.
+ 1 APPPATH\Controllers\Prestamo.php(114): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: prod_foto', 'C:\\xampp\\htdocs\\lab-backend\\app\\Controllers\\Prestamo.php', 114, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-03 04:13:42 --> Undefined index: prod_foto
+in APPPATH\Controllers\Prestamo.php on line 114.
+ 1 APPPATH\Controllers\Prestamo.php(114): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: prod_foto', 'C:\\xampp\\htdocs\\lab-backend\\app\\Controllers\\Prestamo.php', 114, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-03 04:17:36 --> Undefined index: prod_foto
+in APPPATH\Controllers\Inventario.php on line 113.
+ 1 APPPATH\Controllers\Inventario.php(113): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: prod_foto', 'C:\\xampp\\htdocs\\lab-backend\\app\\Controllers\\Inventario.php', 113, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Inventario->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventario))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-03 04:19:10 --> "datetime" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 320.
+ 1 SYSTEMPATH\Validation\Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('datetime')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('inve_fecha', 'inve_fecha', '2024-04-25 05:30:58', [...], [...])
+ 3 APPPATH\Controllers\Inventario.php(123): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Inventario->create()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventario))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-03 04:22:11 --> Undefined index: usua_pass
+in APPPATH\Controllers\Usuario.php on line 167.
+ 1 APPPATH\Controllers\Usuario.php(167): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: usua_pass', 'C:\\xampp\\htdocs\\lab-backend\\app\\Controllers\\Usuario.php', 167, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->update('4')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,222 @@
+CRITICAL - 2024-06-19 12:57:03 --> Call to undefined method App\Models\UsuarioModel::getCliente
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Login.php(11): CodeIgniter\Model->__call('getCliente', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 12:57:07 --> Call to undefined method App\Models\UsuarioModel::getCliente
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Login.php(11): CodeIgniter\Model->__call('getCliente', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 13:05:54 --> Call to undefined method App\Models\UsuarioModel::getCliente
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Login.php(11): CodeIgniter\Model->__call('getCliente', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 13:06:16 --> Call to undefined method App\Models\UsuarioModel::getCliente
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Login.php(11): CodeIgniter\Model->__call('getCliente', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 13:06:31 --> Undefined offset: 123
+in APPPATH\Controllers\Login.php on line 15.
+ 1 APPPATH\Controllers\Login.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 123', 'C:\\xampp\\htdocs\\lab-backend\\app\\Controllers\\Login.php', 15, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 13:08:35 --> Undefined offset: 123
+in APPPATH\Controllers\Login.php on line 15.
+ 1 APPPATH\Controllers\Login.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 123', 'C:\\xampp\\htdocs\\lab-backend\\app\\Controllers\\Login.php', 15, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-19 14:59:47 --> mysqli_sql_exception: Unknown column 'ul.labo_escu_id' in 'on clause' in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\app\Models\UsuarioLaboratorioModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lab-backend\app\Controllers\UsuarioLaboratorio.php(20): App\Models\UsuarioLaboratorioModel->getUsuarioLaboratorio()
+#6 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\UsuarioLaboratorio->index()
+#7 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuarioLaboratorio))
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-06-19 14:59:47 --> Unknown column 'ul.labo_escu_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `usuario_laboratorio` `ul`
+JOIN `usuario` `u` ON `u`.`usua_id` = `ul`.`usla_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `ul`.`usla_labo_id`
+JOIN `escuela` `e` ON `e`.`escu_id` = `ul`.`labo_escu_id`
+WHERE `ul`.`usla_estado` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuario_laboratorio` `ul`
+JOIN `usuario` `u` ON `u`.`usua_id` = `ul`.`usla_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `ul`.`usla_labo_id`
+JOIN `escuela` `e` ON `e`.`escu_id` = `ul`.`labo_escu_id`
+WHERE `ul`.`usla_estado` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuario_laboratorio` `ul`
+JOIN `usuario` `u` ON `u`.`usua_id` = `ul`.`usla_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `ul`.`usla_labo_id`
+JOIN `escuela` `e` ON `e`.`escu_id` = `ul`.`labo_escu_id`
+WHERE `ul`.`usla_estado` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuario_laboratorio` `ul`
+JOIN `usuario` `u` ON `u`.`usua_id` = `ul`.`usla_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `ul`.`usla_labo_id`
+JOIN `escuela` `e` ON `e`.`escu_id` = `ul`.`labo_escu_id`
+WHERE `ul`.`usla_estado` = :ul.usla_estado:', [...], false)
+ 5 APPPATH\Models\UsuarioLaboratorioModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UsuarioLaboratorio.php(20): App\Models\UsuarioLaboratorioModel->getUsuarioLaboratorio()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UsuarioLaboratorio->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuarioLaboratorio))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-19 14:59:49 --> mysqli_sql_exception: Unknown column 'ul.labo_escu_id' in 'on clause' in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\app\Models\UsuarioLaboratorioModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lab-backend\app\Controllers\UsuarioLaboratorio.php(20): App\Models\UsuarioLaboratorioModel->getUsuarioLaboratorio()
+#6 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\UsuarioLaboratorio->index()
+#7 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuarioLaboratorio))
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-06-19 14:59:49 --> Unknown column 'ul.labo_escu_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `usuario_laboratorio` `ul`
+JOIN `usuario` `u` ON `u`.`usua_id` = `ul`.`usla_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `ul`.`usla_labo_id`
+JOIN `escuela` `e` ON `e`.`escu_id` = `ul`.`labo_escu_id`
+WHERE `ul`.`usla_estado` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuario_laboratorio` `ul`
+JOIN `usuario` `u` ON `u`.`usua_id` = `ul`.`usla_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `ul`.`usla_labo_id`
+JOIN `escuela` `e` ON `e`.`escu_id` = `ul`.`labo_escu_id`
+WHERE `ul`.`usla_estado` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuario_laboratorio` `ul`
+JOIN `usuario` `u` ON `u`.`usua_id` = `ul`.`usla_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `ul`.`usla_labo_id`
+JOIN `escuela` `e` ON `e`.`escu_id` = `ul`.`labo_escu_id`
+WHERE `ul`.`usla_estado` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuario_laboratorio` `ul`
+JOIN `usuario` `u` ON `u`.`usua_id` = `ul`.`usla_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `ul`.`usla_labo_id`
+JOIN `escuela` `e` ON `e`.`escu_id` = `ul`.`labo_escu_id`
+WHERE `ul`.`usla_estado` = :ul.usla_estado:', [...], false)
+ 5 APPPATH\Models\UsuarioLaboratorioModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UsuarioLaboratorio.php(20): App\Models\UsuarioLaboratorioModel->getUsuarioLaboratorio()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UsuarioLaboratorio->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuarioLaboratorio))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-19 15:48:21 --> mysqli_sql_exception: Not unique table/alias: 'ul' in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.*, `...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.*, `...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.*, `...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.*, `...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\app\Models\UsuarioLaboratorioModel.php(24): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lab-backend\app\Controllers\UsuarioLaboratorio.php(20): App\Models\UsuarioLaboratorioModel->getUsuarioLaboratorio()
+#6 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\UsuarioLaboratorio->index()
+#7 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuarioLaboratorio))
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-06-19 15:48:21 --> Not unique table/alias: 'ul'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.*, `ul`.`usla_estado`, `l`.`labo_id`, `l`.`labo_nombre`, `e`.`escu_id`, `e`.`escu_nombre`
+FROM `usuario_laboratorio` `ul`
+LEFT JOIN `usuario_laboratorio` `ul` ON `u`.`usua_id` = `ul`.`usla_usua_id`
+LEFT JOIN `laboratorio` `l` ON `l`.`labo_id` = `ul`.`usla_labo_id`
+LEFT JOIN `escuela` `e` ON `e`.`escu_id` = `l`.`labo_escu_id`
+WHERE `u`.`usua_estado` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.*, `ul`.`usla_estado`, `l`.`labo_id`, `l`.`labo_nombre`, `e`.`escu_id`, `e`.`escu_nombre`
+FROM `usuario_laboratorio` `ul`
+LEFT JOIN `usuario_laboratorio` `ul` ON `u`.`usua_id` = `ul`.`usla_usua_id`
+LEFT JOIN `laboratorio` `l` ON `l`.`labo_id` = `ul`.`usla_labo_id`
+LEFT JOIN `escuela` `e` ON `e`.`escu_id` = `l`.`labo_escu_id`
+WHERE `u`.`usua_estado` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.*, `ul`.`usla_estado`, `l`.`labo_id`, `l`.`labo_nombre`, `e`.`escu_id`, `e`.`escu_nombre`
+FROM `usuario_laboratorio` `ul`
+LEFT JOIN `usuario_laboratorio` `ul` ON `u`.`usua_id` = `ul`.`usla_usua_id`
+LEFT JOIN `laboratorio` `l` ON `l`.`labo_id` = `ul`.`usla_labo_id`
+LEFT JOIN `escuela` `e` ON `e`.`escu_id` = `l`.`labo_escu_id`
+WHERE `u`.`usua_estado` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.*, `ul`.`usla_estado`, `l`.`labo_id`, `l`.`labo_nombre`, `e`.`escu_id`, `e`.`escu_nombre`
+FROM `usuario_laboratorio` `ul`
+LEFT JOIN `usuario_laboratorio` `ul` ON `u`.`usua_id` = `ul`.`usla_usua_id`
+LEFT JOIN `laboratorio` `l` ON `l`.`labo_id` = `ul`.`usla_labo_id`
+LEFT JOIN `escuela` `e` ON `e`.`escu_id` = `l`.`labo_escu_id`
+WHERE `u`.`usua_estado` = :u.usua_estado:', [...], false)
+ 5 APPPATH\Models\UsuarioLaboratorioModel.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UsuarioLaboratorio.php(20): App\Models\UsuarioLaboratorioModel->getUsuarioLaboratorio()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UsuarioLaboratorio->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuarioLaboratorio))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-19 15:48:22 --> mysqli_sql_exception: Not unique table/alias: 'ul' in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.*, `...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.*, `...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.*, `...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.*, `...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\app\Models\UsuarioLaboratorioModel.php(24): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lab-backend\app\Controllers\UsuarioLaboratorio.php(20): App\Models\UsuarioLaboratorioModel->getUsuarioLaboratorio()
+#6 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\UsuarioLaboratorio->index()
+#7 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuarioLaboratorio))
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-06-19 15:48:22 --> Not unique table/alias: 'ul'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.*, `ul`.`usla_estado`, `l`.`labo_id`, `l`.`labo_nombre`, `e`.`escu_id`, `e`.`escu_nombre`
+FROM `usuario_laboratorio` `ul`
+LEFT JOIN `usuario_laboratorio` `ul` ON `u`.`usua_id` = `ul`.`usla_usua_id`
+LEFT JOIN `laboratorio` `l` ON `l`.`labo_id` = `ul`.`usla_labo_id`
+LEFT JOIN `escuela` `e` ON `e`.`escu_id` = `l`.`labo_escu_id`
+WHERE `u`.`usua_estado` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.*, `ul`.`usla_estado`, `l`.`labo_id`, `l`.`labo_nombre`, `e`.`escu_id`, `e`.`escu_nombre`
+FROM `usuario_laboratorio` `ul`
+LEFT JOIN `usuario_laboratorio` `ul` ON `u`.`usua_id` = `ul`.`usla_usua_id`
+LEFT JOIN `laboratorio` `l` ON `l`.`labo_id` = `ul`.`usla_labo_id`
+LEFT JOIN `escuela` `e` ON `e`.`escu_id` = `l`.`labo_escu_id`
+WHERE `u`.`usua_estado` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.*, `ul`.`usla_estado`, `l`.`labo_id`, `l`.`labo_nombre`, `e`.`escu_id`, `e`.`escu_nombre`
+FROM `usuario_laboratorio` `ul`
+LEFT JOIN `usuario_laboratorio` `ul` ON `u`.`usua_id` = `ul`.`usla_usua_id`
+LEFT JOIN `laboratorio` `l` ON `l`.`labo_id` = `ul`.`usla_labo_id`
+LEFT JOIN `escuela` `e` ON `e`.`escu_id` = `l`.`labo_escu_id`
+WHERE `u`.`usua_estado` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.*, `ul`.`usla_estado`, `l`.`labo_id`, `l`.`labo_nombre`, `e`.`escu_id`, `e`.`escu_nombre`
+FROM `usuario_laboratorio` `ul`
+LEFT JOIN `usuario_laboratorio` `ul` ON `u`.`usua_id` = `ul`.`usla_usua_id`
+LEFT JOIN `laboratorio` `l` ON `l`.`labo_id` = `ul`.`usla_labo_id`
+LEFT JOIN `escuela` `e` ON `e`.`escu_id` = `l`.`labo_escu_id`
+WHERE `u`.`usua_estado` = :u.usua_estado:', [...], false)
+ 5 APPPATH\Models\UsuarioLaboratorioModel.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UsuarioLaboratorio.php(20): App\Models\UsuarioLaboratorioModel->getUsuarioLaboratorio()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UsuarioLaboratorio->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuarioLaboratorio))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

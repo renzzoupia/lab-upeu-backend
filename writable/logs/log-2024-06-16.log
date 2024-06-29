@@ -1,0 +1,536 @@
+ERROR - 2024-06-16 14:29:25 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`prod_tipr_id`) REFERENCES `tipo_producto` (`tipr_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\Producto.php(132): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Producto->create()
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-16 14:29:25 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`prod_tipr_id`) REFERENCES `tipo_producto` (`tipr_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (:prod_nombre:, :prod_codigoinventario:, :prod_tipr_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Producto.php(132): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Producto->create()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-16 14:29:28 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`prod_tipr_id`) REFERENCES `tipo_producto` (`tipr_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\Producto.php(132): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Producto->create()
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-16 14:29:28 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`prod_tipr_id`) REFERENCES `tipo_producto` (`tipr_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (:prod_nombre:, :prod_codigoinventario:, :prod_tipr_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Producto.php(132): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Producto->create()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-16 14:29:38 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`prod_tipr_id`) REFERENCES `tipo_producto` (`tipr_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\Producto.php(132): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Producto->create()
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-16 14:29:38 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`prod_tipr_id`) REFERENCES `tipo_producto` (`tipr_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (:prod_nombre:, :prod_codigoinventario:, :prod_tipr_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Producto.php(132): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Producto->create()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-16 14:29:50 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`prod_tipr_id`) REFERENCES `tipo_producto` (`tipr_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\Producto.php(132): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Producto->create()
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-16 14:29:50 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`prod_tipr_id`) REFERENCES `tipo_producto` (`tipr_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (:prod_nombre:, :prod_codigoinventario:, :prod_tipr_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Producto.php(132): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Producto->create()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-16 14:29:52 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`prod_tipr_id`) REFERENCES `tipo_producto` (`tipr_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\Producto.php(132): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Producto->create()
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-16 14:29:52 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`prod_tipr_id`) REFERENCES `tipo_producto` (`tipr_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (:prod_nombre:, :prod_codigoinventario:, :prod_tipr_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Producto.php(132): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Producto->create()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-16 14:29:53 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`prod_tipr_id`) REFERENCES `tipo_producto` (`tipr_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\Producto.php(132): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Producto->create()
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-16 14:29:53 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`prod_tipr_id`) REFERENCES `tipo_producto` (`tipr_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (:prod_nombre:, :prod_codigoinventario:, :prod_tipr_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Producto.php(132): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Producto->create()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-16 14:29:55 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`prod_tipr_id`) REFERENCES `tipo_producto` (`tipr_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\Producto.php(132): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Producto->create()
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-16 14:29:55 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`prod_tipr_id`) REFERENCES `tipo_producto` (`tipr_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (:prod_nombre:, :prod_codigoinventario:, :prod_tipr_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Producto.php(132): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Producto->create()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-16 14:29:58 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`prod_tipr_id`) REFERENCES `tipo_producto` (`tipr_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\Producto.php(132): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Producto->create()
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-16 14:29:58 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`prod_tipr_id`) REFERENCES `tipo_producto` (`tipr_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (:prod_nombre:, :prod_codigoinventario:, :prod_tipr_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Producto.php(132): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Producto->create()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-16 14:32:33 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`prod_tipr_id`) REFERENCES `tipo_producto` (`tipr_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\Producto.php(132): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Producto->create()
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-16 14:32:33 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`prod_tipr_id`) REFERENCES `tipo_producto` (`tipr_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (:prod_nombre:, :prod_codigoinventario:, :prod_tipr_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Producto.php(132): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Producto->create()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-16 14:32:45 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`prod_tipr_id`) REFERENCES `tipo_producto` (`tipr_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\Producto.php(132): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Producto->create()
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-16 14:32:45 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`prod_tipr_id`) REFERENCES `tipo_producto` (`tipr_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (\'Cable\', \'123\', \'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`prod_nombre`, `prod_codigoinventario`, `prod_tipr_id`) VALUES (:prod_nombre:, :prod_codigoinventario:, :prod_tipr_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Producto.php(132): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Producto->create()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-16 23:32:43 --> mysqli_sql_exception: Unknown column 'i.inve_usua_id' in 'on clause' in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\app\Models\InventarioModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lab-backend\app\Controllers\Inventario.php(20): App\Models\InventarioModel->getInventario()
+#6 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Inventario->index()
+#7 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventario))
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-06-16 23:32:43 --> Unknown column 'i.inve_usua_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`', [], false)
+ 5 APPPATH\Models\InventarioModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Inventario.php(20): App\Models\InventarioModel->getInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Inventario->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventario))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-16 23:32:45 --> mysqli_sql_exception: Unknown column 'i.inve_usua_id' in 'on clause' in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\app\Models\InventarioModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lab-backend\app\Controllers\Inventario.php(20): App\Models\InventarioModel->getInventario()
+#6 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Inventario->index()
+#7 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventario))
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-06-16 23:32:45 --> Unknown column 'i.inve_usua_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`', [], false)
+ 5 APPPATH\Models\InventarioModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Inventario.php(20): App\Models\InventarioModel->getInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Inventario->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventario))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-16 23:32:50 --> mysqli_sql_exception: Unknown column 'i.inve_usua_id' in 'on clause' in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\app\Models\InventarioModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lab-backend\app\Controllers\Inventario.php(20): App\Models\InventarioModel->getInventario()
+#6 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Inventario->index()
+#7 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventario))
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-06-16 23:32:50 --> Unknown column 'i.inve_usua_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`', [], false)
+ 5 APPPATH\Models\InventarioModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Inventario.php(20): App\Models\InventarioModel->getInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Inventario->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventario))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-16 23:33:09 --> mysqli_sql_exception: Unknown column 'i.inve_usua_id' in 'on clause' in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\app\Models\InventarioModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lab-backend\app\Controllers\Inventario.php(20): App\Models\InventarioModel->getInventario()
+#6 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Inventario->index()
+#7 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventario))
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-06-16 23:33:09 --> Unknown column 'i.inve_usua_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`', [], false)
+ 5 APPPATH\Models\InventarioModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Inventario.php(20): App\Models\InventarioModel->getInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Inventario->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventario))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-16 23:33:12 --> mysqli_sql_exception: Unknown column 'i.inve_usua_id' in 'on clause' in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\app\Models\InventarioModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lab-backend\app\Controllers\Inventario.php(20): App\Models\InventarioModel->getInventario()
+#6 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Inventario->index()
+#7 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventario))
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-06-16 23:33:12 --> Unknown column 'i.inve_usua_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`', [], false)
+ 5 APPPATH\Models\InventarioModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Inventario.php(20): App\Models\InventarioModel->getInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Inventario->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventario))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-16 23:33:26 --> mysqli_sql_exception: Unknown column 'i.inve_usua_id' in 'on clause' in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\app\Models\InventarioModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lab-backend\app\Controllers\Inventario.php(20): App\Models\InventarioModel->getInventario()
+#6 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Inventario->index()
+#7 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventario))
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-06-16 23:33:26 --> Unknown column 'i.inve_usua_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `inventario` `i`
+JOIN `producto` `pr` ON `pr`.`prod_id` = `i`.`inve_prod_id`
+JOIN `usuario` `u` ON `u`.`usua_id` = `i`.`inve_usua_id`
+JOIN `laboratorio` `l` ON `l`.`labo_id` = `i`.`inve_labo_id`', [], false)
+ 5 APPPATH\Models\InventarioModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Inventario.php(20): App\Models\InventarioModel->getInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Inventario->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventario))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

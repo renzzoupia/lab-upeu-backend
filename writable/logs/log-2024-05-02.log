@@ -1,0 +1,7 @@
+CRITICAL - 2024-05-02 21:42:22 --> Undefined index: usua_pass
+in APPPATH\Controllers\Usuario.php on line 96.
+ 1 APPPATH\Controllers\Usuario.php(96): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: usua_pass', 'C:\\xampp\\htdocs\\lab-backend\\app\\Controllers\\Usuario.php', 96, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

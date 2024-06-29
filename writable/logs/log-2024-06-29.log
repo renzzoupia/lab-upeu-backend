@@ -1,0 +1,580 @@
+CRITICAL - 2024-06-29 03:48:56 --> Call to a member function isValid() on null
+in APPPATH\Controllers\Prestamo.php on line 259.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('undefined')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-29 03:56:43 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Prestamo.php on line 256.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-29 03:56:56 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Prestamo.php on line 256.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-29 04:01:08 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Prestamo.php on line 256.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-29 04:01:38 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Prestamo.php on line 256.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-29 04:02:29 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`prestamo`, CONSTRAINT `prestamo_ibfk_1` FOREIGN KEY (`pres_inve_id`) REFERENCES `inventario` (`inve_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `prestam...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestam...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestam...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `prestam...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\Prestamo.php(255): CodeIgniter\Model->update('6', Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-29 04:02:29 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`prestamo`, CONSTRAINT `prestamo_ibfk_1` FOREIGN KEY (`pres_inve_id`) REFERENCES `inventario` (`inve_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `prestamo` SET `pres_inve_id` = :pres_inve_id:, `pres_usua_id` = :pres_usua_id:, `pres_cantidad` = :pres_cantidad:, `pres_codigouni_alumno` = :pres_codigouni_alumno:, `pres_evidencia` = :pres_evidencia:, `pres_fechasolicitud` = :pres_fechasolicitud:, `pres_fechaentregado` = :pres_fechaentregado:, `pres_fechadevolucion` = :pres_fechadevolucion:
+WHERE `prestamo`.`pres_id` IN :prestamo.pres_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Prestamo.php(255): CodeIgniter\Model->update('6', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-29 04:02:54 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`prestamo`, CONSTRAINT `prestamo_ibfk_1` FOREIGN KEY (`pres_inve_id`) REFERENCES `inventario` (`inve_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `prestam...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestam...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestam...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `prestam...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\Prestamo.php(255): CodeIgniter\Model->update('6', Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-29 04:02:54 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`prestamo`, CONSTRAINT `prestamo_ibfk_1` FOREIGN KEY (`pres_inve_id`) REFERENCES `inventario` (`inve_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `prestamo` SET `pres_inve_id` = :pres_inve_id:, `pres_usua_id` = :pres_usua_id:, `pres_cantidad` = :pres_cantidad:, `pres_codigouni_alumno` = :pres_codigouni_alumno:, `pres_evidencia` = :pres_evidencia:, `pres_fechasolicitud` = :pres_fechasolicitud:, `pres_fechaentregado` = :pres_fechaentregado:, `pres_fechadevolucion` = :pres_fechadevolucion:
+WHERE `prestamo`.`pres_id` IN :prestamo.pres_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Prestamo.php(255): CodeIgniter\Model->update('6', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-29 04:04:45 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`prestamo`, CONSTRAINT `prestamo_ibfk_1` FOREIGN KEY (`pres_inve_id`) REFERENCES `inventario` (`inve_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `prestam...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestam...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestam...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `prestam...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\Prestamo.php(255): CodeIgniter\Model->update('6', Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-29 04:04:45 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`prestamo`, CONSTRAINT `prestamo_ibfk_1` FOREIGN KEY (`pres_inve_id`) REFERENCES `inventario` (`inve_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `prestamo` SET `pres_inve_id` = :pres_inve_id:, `pres_usua_id` = :pres_usua_id:, `pres_cantidad` = :pres_cantidad:, `pres_codigouni_alumno` = :pres_codigouni_alumno:, `pres_evidencia` = :pres_evidencia:, `pres_fechasolicitud` = :pres_fechasolicitud:, `pres_fechaentregado` = :pres_fechaentregado:, `pres_fechadevolucion` = :pres_fechadevolucion:
+WHERE `prestamo`.`pres_id` IN :prestamo.pres_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Prestamo.php(255): CodeIgniter\Model->update('6', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-29 04:08:55 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`prestamo`, CONSTRAINT `prestamo_ibfk_1` FOREIGN KEY (`pres_inve_id`) REFERENCES `inventario` (`inve_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `prestam...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestam...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestam...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `prestam...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\Prestamo.php(259): CodeIgniter\Model->update('6', Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-29 04:08:55 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`prestamo`, CONSTRAINT `prestamo_ibfk_1` FOREIGN KEY (`pres_inve_id`) REFERENCES `inventario` (`inve_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL, `pres_fecharealdevolucion` = NULL, `pres_observacion` = NULL, `pres_estado` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL, `pres_fecharealdevolucion` = NULL, `pres_observacion` = NULL, `pres_estado` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL, `pres_fecharealdevolucion` = NULL, `pres_observacion` = NULL, `pres_estado` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `prestamo` SET `pres_inve_id` = :pres_inve_id:, `pres_usua_id` = :pres_usua_id:, `pres_cantidad` = :pres_cantidad:, `pres_codigouni_alumno` = :pres_codigouni_alumno:, `pres_evidencia` = :pres_evidencia:, `pres_fechasolicitud` = :pres_fechasolicitud:, `pres_fechaentregado` = :pres_fechaentregado:, `pres_fechadevolucion` = :pres_fechadevolucion:, `pres_fecharealdevolucion` = :pres_fecharealdevolucion:, `pres_observacion` = :pres_observacion:, `pres_estado` = :pres_estado:
+WHERE `prestamo`.`pres_id` IN :prestamo.pres_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Prestamo.php(259): CodeIgniter\Model->update('6', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-29 04:08:58 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`prestamo`, CONSTRAINT `prestamo_ibfk_1` FOREIGN KEY (`pres_inve_id`) REFERENCES `inventario` (`inve_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `prestam...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestam...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestam...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `prestam...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\Prestamo.php(259): CodeIgniter\Model->update('6', Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-29 04:08:58 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`prestamo`, CONSTRAINT `prestamo_ibfk_1` FOREIGN KEY (`pres_inve_id`) REFERENCES `inventario` (`inve_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL, `pres_fecharealdevolucion` = NULL, `pres_observacion` = NULL, `pres_estado` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL, `pres_fecharealdevolucion` = NULL, `pres_observacion` = NULL, `pres_estado` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL, `pres_fecharealdevolucion` = NULL, `pres_observacion` = NULL, `pres_estado` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `prestamo` SET `pres_inve_id` = :pres_inve_id:, `pres_usua_id` = :pres_usua_id:, `pres_cantidad` = :pres_cantidad:, `pres_codigouni_alumno` = :pres_codigouni_alumno:, `pres_evidencia` = :pres_evidencia:, `pres_fechasolicitud` = :pres_fechasolicitud:, `pres_fechaentregado` = :pres_fechaentregado:, `pres_fechadevolucion` = :pres_fechadevolucion:, `pres_fecharealdevolucion` = :pres_fecharealdevolucion:, `pres_observacion` = :pres_observacion:, `pres_estado` = :pres_estado:
+WHERE `prestamo`.`pres_id` IN :prestamo.pres_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Prestamo.php(259): CodeIgniter\Model->update('6', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-29 04:26:06 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`prestamo`, CONSTRAINT `prestamo_ibfk_1` FOREIGN KEY (`pres_inve_id`) REFERENCES `inventario` (`inve_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `prestam...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestam...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestam...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `prestam...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\Prestamo.php(259): CodeIgniter\Model->update('6', Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-29 04:26:06 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`prestamo`, CONSTRAINT `prestamo_ibfk_1` FOREIGN KEY (`pres_inve_id`) REFERENCES `inventario` (`inve_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL, `pres_fecharealdevolucion` = NULL, `pres_observacion` = NULL, `pres_estado` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL, `pres_fecharealdevolucion` = NULL, `pres_observacion` = NULL, `pres_estado` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL, `pres_fecharealdevolucion` = NULL, `pres_observacion` = NULL, `pres_estado` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `prestamo` SET `pres_inve_id` = :pres_inve_id:, `pres_usua_id` = :pres_usua_id:, `pres_cantidad` = :pres_cantidad:, `pres_codigouni_alumno` = :pres_codigouni_alumno:, `pres_evidencia` = :pres_evidencia:, `pres_fechasolicitud` = :pres_fechasolicitud:, `pres_fechaentregado` = :pres_fechaentregado:, `pres_fechadevolucion` = :pres_fechadevolucion:, `pres_fecharealdevolucion` = :pres_fecharealdevolucion:, `pres_observacion` = :pres_observacion:, `pres_estado` = :pres_estado:
+WHERE `prestamo`.`pres_id` IN :prestamo.pres_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Prestamo.php(259): CodeIgniter\Model->update('6', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-29 04:26:08 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`prestamo`, CONSTRAINT `prestamo_ibfk_1` FOREIGN KEY (`pres_inve_id`) REFERENCES `inventario` (`inve_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `prestam...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestam...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestam...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `prestam...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\Prestamo.php(259): CodeIgniter\Model->update('6', Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-29 04:26:08 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`prestamo`, CONSTRAINT `prestamo_ibfk_1` FOREIGN KEY (`pres_inve_id`) REFERENCES `inventario` (`inve_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL, `pres_fecharealdevolucion` = NULL, `pres_observacion` = NULL, `pres_estado` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL, `pres_fecharealdevolucion` = NULL, `pres_observacion` = NULL, `pres_estado` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL, `pres_fecharealdevolucion` = NULL, `pres_observacion` = NULL, `pres_estado` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `prestamo` SET `pres_inve_id` = :pres_inve_id:, `pres_usua_id` = :pres_usua_id:, `pres_cantidad` = :pres_cantidad:, `pres_codigouni_alumno` = :pres_codigouni_alumno:, `pres_evidencia` = :pres_evidencia:, `pres_fechasolicitud` = :pres_fechasolicitud:, `pres_fechaentregado` = :pres_fechaentregado:, `pres_fechadevolucion` = :pres_fechadevolucion:, `pres_fecharealdevolucion` = :pres_fecharealdevolucion:, `pres_observacion` = :pres_observacion:, `pres_estado` = :pres_estado:
+WHERE `prestamo`.`pres_id` IN :prestamo.pres_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Prestamo.php(259): CodeIgniter\Model->update('6', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-29 04:31:00 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`prestamo`, CONSTRAINT `prestamo_ibfk_1` FOREIGN KEY (`pres_inve_id`) REFERENCES `inventario` (`inve_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `prestam...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestam...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestam...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `prestam...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\Prestamo.php(259): CodeIgniter\Model->update('6', Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-29 04:31:00 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`prestamo`, CONSTRAINT `prestamo_ibfk_1` FOREIGN KEY (`pres_inve_id`) REFERENCES `inventario` (`inve_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `prestamo` SET `pres_inve_id` = 1, `pres_usua_id` = 1, `pres_cantidad` = 100, `pres_codigouni_alumno` = 12345, `pres_evidencia` = NULL, `pres_fechasolicitud` = \'2021-01-01\', `pres_fechaentregado` = \'2021-01-02\', `pres_fechadevolucion` = \'2021-01-03\', `pres_fecharealdevolucion` = \'2021-01-04\', `pres_observacion` = \'Ninguna observación\', `pres_estado` = \'Activo\'
+WHERE `prestamo`.`pres_id` IN (\'6\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestamo` SET `pres_inve_id` = 1, `pres_usua_id` = 1, `pres_cantidad` = 100, `pres_codigouni_alumno` = 12345, `pres_evidencia` = NULL, `pres_fechasolicitud` = \'2021-01-01\', `pres_fechaentregado` = \'2021-01-02\', `pres_fechadevolucion` = \'2021-01-03\', `pres_fecharealdevolucion` = \'2021-01-04\', `pres_observacion` = \'Ninguna observación\', `pres_estado` = \'Activo\'
+WHERE `prestamo`.`pres_id` IN (\'6\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestamo` SET `pres_inve_id` = 1, `pres_usua_id` = 1, `pres_cantidad` = 100, `pres_codigouni_alumno` = 12345, `pres_evidencia` = NULL, `pres_fechasolicitud` = \'2021-01-01\', `pres_fechaentregado` = \'2021-01-02\', `pres_fechadevolucion` = \'2021-01-03\', `pres_fecharealdevolucion` = \'2021-01-04\', `pres_observacion` = \'Ninguna observación\', `pres_estado` = \'Activo\'
+WHERE `prestamo`.`pres_id` IN (\'6\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `prestamo` SET `pres_inve_id` = :pres_inve_id:, `pres_usua_id` = :pres_usua_id:, `pres_cantidad` = :pres_cantidad:, `pres_codigouni_alumno` = :pres_codigouni_alumno:, `pres_evidencia` = :pres_evidencia:, `pres_fechasolicitud` = :pres_fechasolicitud:, `pres_fechaentregado` = :pres_fechaentregado:, `pres_fechadevolucion` = :pres_fechadevolucion:, `pres_fecharealdevolucion` = :pres_fecharealdevolucion:, `pres_observacion` = :pres_observacion:, `pres_estado` = :pres_estado:
+WHERE `prestamo`.`pres_id` IN :prestamo.pres_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Prestamo.php(259): CodeIgniter\Model->update('6', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-29 04:31:12 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`prestamo`, CONSTRAINT `prestamo_ibfk_1` FOREIGN KEY (`pres_inve_id`) REFERENCES `inventario` (`inve_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `prestam...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestam...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestam...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `prestam...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\Prestamo.php(259): CodeIgniter\Model->update('6', Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-29 04:31:12 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`prestamo`, CONSTRAINT `prestamo_ibfk_1` FOREIGN KEY (`pres_inve_id`) REFERENCES `inventario` (`inve_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL, `pres_fecharealdevolucion` = NULL, `pres_observacion` = NULL, `pres_estado` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL, `pres_fecharealdevolucion` = NULL, `pres_observacion` = NULL, `pres_estado` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestamo` SET `pres_inve_id` = NULL, `pres_usua_id` = NULL, `pres_cantidad` = NULL, `pres_codigouni_alumno` = NULL, `pres_evidencia` = NULL, `pres_fechasolicitud` = NULL, `pres_fechaentregado` = NULL, `pres_fechadevolucion` = NULL, `pres_fecharealdevolucion` = NULL, `pres_observacion` = NULL, `pres_estado` = NULL
+WHERE `prestamo`.`pres_id` IN (\'6\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `prestamo` SET `pres_inve_id` = :pres_inve_id:, `pres_usua_id` = :pres_usua_id:, `pres_cantidad` = :pres_cantidad:, `pres_codigouni_alumno` = :pres_codigouni_alumno:, `pres_evidencia` = :pres_evidencia:, `pres_fechasolicitud` = :pres_fechasolicitud:, `pres_fechaentregado` = :pres_fechaentregado:, `pres_fechadevolucion` = :pres_fechadevolucion:, `pres_fecharealdevolucion` = :pres_fecharealdevolucion:, `pres_observacion` = :pres_observacion:, `pres_estado` = :pres_estado:
+WHERE `prestamo`.`pres_id` IN :prestamo.pres_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Prestamo.php(259): CodeIgniter\Model->update('6', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update('6')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-29 05:11:11 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Prestamo.php on line 144.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-29 05:11:21 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Prestamo.php on line 144.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-29 05:12:08 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Prestamo.php on line 144.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-29 05:12:22 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Prestamo.php on line 144.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-29 05:12:53 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Prestamo.php on line 144.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-29 05:12:55 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Prestamo.php on line 144.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-29 05:15:50 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\Prestamo.php(251): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-29 05:16:00 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\Prestamo.php(251): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-29 05:17:22 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\Prestamo.php(251): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-29 05:18:06 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\Prestamo.php(251): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Prestamo->update()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prestamo))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-29 13:58:27 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`usuario_laboratorio`, CONSTRAINT `usuario_laboratorio_ibfk_1` FOREIGN KEY (`usla_usua_id`) REFERENCES `usuario` (`usua_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\UsuarioLaboratorio.php(134): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\UsuarioLaboratorio->create()
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuarioLaboratorio))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-29 13:58:27 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`usuario_laboratorio`, CONSTRAINT `usuario_laboratorio_ibfk_1` FOREIGN KEY (`usla_usua_id`) REFERENCES `usuario` (`usua_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario_laboratorio` (`usla_periodo_inicio`, `usla_periodo_fin`) VALUES (\'2024-06-29\', \'2024-07-06\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario_laboratorio` (`usla_periodo_inicio`, `usla_periodo_fin`) VALUES (\'2024-06-29\', \'2024-07-06\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario_laboratorio` (`usla_periodo_inicio`, `usla_periodo_fin`) VALUES (\'2024-06-29\', \'2024-07-06\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario_laboratorio` (`usla_periodo_inicio`, `usla_periodo_fin`) VALUES (:usla_periodo_inicio:, :usla_periodo_fin:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\UsuarioLaboratorio.php(134): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UsuarioLaboratorio->create()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuarioLaboratorio))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-29 13:59:45 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`usuario_laboratorio`, CONSTRAINT `usuario_laboratorio_ibfk_1` FOREIGN KEY (`usla_usua_id`) REFERENCES `usuario` (`usua_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\UsuarioLaboratorio.php(134): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\UsuarioLaboratorio->create()
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuarioLaboratorio))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-29 13:59:45 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`usuario_laboratorio`, CONSTRAINT `usuario_laboratorio_ibfk_1` FOREIGN KEY (`usla_usua_id`) REFERENCES `usuario` (`usua_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario_laboratorio` (`usla_periodo_inicio`, `usla_periodo_fin`) VALUES (\'2024-06-29\', \'2024-07-06\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario_laboratorio` (`usla_periodo_inicio`, `usla_periodo_fin`) VALUES (\'2024-06-29\', \'2024-07-06\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario_laboratorio` (`usla_periodo_inicio`, `usla_periodo_fin`) VALUES (\'2024-06-29\', \'2024-07-06\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario_laboratorio` (`usla_periodo_inicio`, `usla_periodo_fin`) VALUES (:usla_periodo_inicio:, :usla_periodo_fin:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\UsuarioLaboratorio.php(134): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UsuarioLaboratorio->create()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuarioLaboratorio))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-29 14:01:34 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`usuario_laboratorio`, CONSTRAINT `usuario_laboratorio_ibfk_1` FOREIGN KEY (`usla_usua_id`) REFERENCES `usuario` (`usua_id`) ON DELETE NO ACTION ON UPDATE CASCADE) in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\UsuarioLaboratorio.php(134): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\UsuarioLaboratorio->create()
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuarioLaboratorio))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-29 14:01:34 --> Cannot add or update a child row: a foreign key constraint fails (`lab_db`.`usuario_laboratorio`, CONSTRAINT `usuario_laboratorio_ibfk_1` FOREIGN KEY (`usla_usua_id`) REFERENCES `usuario` (`usua_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario_laboratorio` (`usla_periodo_inicio`, `usla_periodo_fin`) VALUES (\'2024-06-29\', \'2024-07-06\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario_laboratorio` (`usla_periodo_inicio`, `usla_periodo_fin`) VALUES (\'2024-06-29\', \'2024-07-06\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario_laboratorio` (`usla_periodo_inicio`, `usla_periodo_fin`) VALUES (\'2024-06-29\', \'2024-07-06\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario_laboratorio` (`usla_periodo_inicio`, `usla_periodo_fin`) VALUES (:usla_periodo_inicio:, :usla_periodo_fin:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\UsuarioLaboratorio.php(134): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UsuarioLaboratorio->create()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuarioLaboratorio))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-29 14:02:02 --> Undefined index: esla_escu_id
+in APPPATH\Controllers\UsuarioLaboratorio.php on line 128.
+ 1 APPPATH\Controllers\UsuarioLaboratorio.php(128): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: esla_escu_id', 'C:\\xampp\\htdocs\\lab-backend\\app\\Controllers\\UsuarioLaboratorio.php', 128, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UsuarioLaboratorio->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuarioLaboratorio))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-29 14:03:12 --> mysqli_sql_exception: Column 'usla_labo_id' cannot be null in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\UsuarioLaboratorio.php(134): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\UsuarioLaboratorio->create()
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuarioLaboratorio))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-29 14:03:12 --> Column 'usla_labo_id' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario_laboratorio` (`usla_usua_id`, `usla_labo_id`, `usla_periodo_inicio`, `usla_periodo_fin`) VALUES (\'6\', NULL, \'2024-06-29\', \'2024-07-06\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario_laboratorio` (`usla_usua_id`, `usla_labo_id`, `usla_periodo_inicio`, `usla_periodo_fin`) VALUES (\'6\', NULL, \'2024-06-29\', \'2024-07-06\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario_laboratorio` (`usla_usua_id`, `usla_labo_id`, `usla_periodo_inicio`, `usla_periodo_fin`) VALUES (\'6\', NULL, \'2024-06-29\', \'2024-07-06\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario_laboratorio` (`usla_usua_id`, `usla_labo_id`, `usla_periodo_inicio`, `usla_periodo_fin`) VALUES (:usla_usua_id:, :usla_labo_id:, :usla_periodo_inicio:, :usla_periodo_fin:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\UsuarioLaboratorio.php(134): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UsuarioLaboratorio->create()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuarioLaboratorio))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-29 14:05:37 --> mysqli_sql_exception: Column 'usla_labo_id' cannot be null in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\UsuarioLaboratorio.php(134): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\UsuarioLaboratorio->create()
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuarioLaboratorio))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-29 14:05:37 --> Column 'usla_labo_id' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario_laboratorio` (`usla_usua_id`, `usla_labo_id`, `usla_periodo_inicio`, `usla_periodo_fin`) VALUES (\'6\', NULL, \'2024-06-29\', \'2024-07-06\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario_laboratorio` (`usla_usua_id`, `usla_labo_id`, `usla_periodo_inicio`, `usla_periodo_fin`) VALUES (\'6\', NULL, \'2024-06-29\', \'2024-07-06\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario_laboratorio` (`usla_usua_id`, `usla_labo_id`, `usla_periodo_inicio`, `usla_periodo_fin`) VALUES (\'6\', NULL, \'2024-06-29\', \'2024-07-06\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario_laboratorio` (`usla_usua_id`, `usla_labo_id`, `usla_periodo_inicio`, `usla_periodo_fin`) VALUES (:usla_usua_id:, :usla_labo_id:, :usla_periodo_inicio:, :usla_periodo_fin:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\UsuarioLaboratorio.php(134): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UsuarioLaboratorio->create()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuarioLaboratorio))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-29 14:05:41 --> mysqli_sql_exception: Column 'usla_labo_id' cannot be null in C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\lab-backend\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\lab-backend\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\lab-backend\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\lab-backend\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\lab-backend\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\lab-backend\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\lab-backend\app\Controllers\UsuarioLaboratorio.php(134): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(934): App\Controllers\UsuarioLaboratorio->create()
+#9 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuarioLaboratorio))
+#10 C:\xampp\htdocs\lab-backend\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\lab-backend\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-29 14:05:41 --> Column 'usla_labo_id' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario_laboratorio` (`usla_usua_id`, `usla_labo_id`, `usla_periodo_inicio`, `usla_periodo_fin`) VALUES (\'6\', NULL, \'2024-06-29\', \'2024-07-06\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario_laboratorio` (`usla_usua_id`, `usla_labo_id`, `usla_periodo_inicio`, `usla_periodo_fin`) VALUES (\'6\', NULL, \'2024-06-29\', \'2024-07-06\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario_laboratorio` (`usla_usua_id`, `usla_labo_id`, `usla_periodo_inicio`, `usla_periodo_fin`) VALUES (\'6\', NULL, \'2024-06-29\', \'2024-07-06\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario_laboratorio` (`usla_usua_id`, `usla_labo_id`, `usla_periodo_inicio`, `usla_periodo_fin`) VALUES (:usla_usua_id:, :usla_labo_id:, :usla_periodo_inicio:, :usla_periodo_fin:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\UsuarioLaboratorio.php(134): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UsuarioLaboratorio->create()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuarioLaboratorio))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
