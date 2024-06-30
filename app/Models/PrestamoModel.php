@@ -7,7 +7,7 @@ class PrestamoModel extends Model{
     protected $returnType = 'array';
     protected $allowedFields = [
         'pres_inve_id',
-        'pres_usua_id',
+        'pres_nombre_alumno',
         'pres_cantidad',
         'pres_codigouni_alumno',
         'pres_evidencia',
@@ -22,7 +22,7 @@ class PrestamoModel extends Model{
     public function getPrestamo(){
         return $this->db->table('prestamo p')
         ->join('inventario i', 'i.inve_id = p.pres_inve_id')
-        ->join('usuario u', 'u.usua_id = p.pres_usua_id')
+        //->join('usuario u', 'u.usua_id = p.pres_usua_id')
         ->join('producto pr', 'pr.prod_id = i.inve_prod_id') // Asegúrate de unir correctamente
         ->get()
         ->getResultArray();
@@ -33,7 +33,7 @@ class PrestamoModel extends Model{
         -> where('p.pres_id', $id)
         //-> where('p.pres_estado', 1)
         ->join('inventario i', 'i.inve_id = p.pres_inve_id')
-        ->join('usuario u', 'u.usua_id = p.pres_usua_id')
+        //->join('usuario u', 'u.usua_id = p.pres_usua_id')
         ->join('producto pr', 'pr.prod_id = i.inve_prod_id')
         -> get() -> getResultArray();
     }
