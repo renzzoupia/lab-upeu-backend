@@ -11,6 +11,7 @@ class InventarioModel extends Model{
         'inve_cantidad_disponible',
         'inve_labo_id',
         'inve_fecha',
+        'inve_cantidad_entrada'
     ];
 
     public function getInventario(){

@@ -105,14 +105,24 @@ class Producto extends Controller{
                         $datos = array(
                             "prod_nombre" => $request -> getVar("prod_nombre"),
                             "prod_codigoinventario" => $request -> getVar("prod_codigoinventario"),
-                            "prod_tipr_id" => $request -> getVar("prod_tipr_id")
+                            "prod_tipr_id" => $request -> getVar("prod_tipr_id"),
+                            "prod_descripcion" => $request -> getVar("prod_descripcion"),
+                            "prod_marca" => $request -> getVar("prod_marca"),
+                            "prod_modelo" => $request -> getVar("prod_modelo"),
+                            "prod_especificaciones" => $request -> getVar("prod_especificaciones"),
+                            "prod_ubicacion" => $request -> getVar("prod_ubicacion")
                         );
 
                         if(!empty($datos)){
                             $validation -> setRules([
                                 "prod_nombre" => 'required|string|max_length[255]',
                                 "prod_codigoinventario" => 'required|integer',
-                                "prod_tipr_id" => 'required|integer'
+                                "prod_tipr_id" => 'required|integer',
+                                //"prod_descripcion" => 'required|string|max_length[255]',
+                                //"prod_marca" => 'required|string|max_length[100]',
+                                //"prod_modelo" => 'required|string|max_length[100]',
+                                //"prod_especificaciones" => 'required|string|max_length[255]',
+                                //"prod_ubicacion" => 'required|string|max_length[255]'
                             ]);
                             $validation -> withRequest($this -> request) -> run();
                             if($validation -> getErrors()){
@@ -126,7 +136,12 @@ class Producto extends Controller{
                                 $datos = array(
                                     "prod_nombre" => $datos["prod_nombre"],
                                     "prod_codigoinventario" => $datos["prod_codigoinventario"],
-                                    "prod_tipr_id" => $datos["prod_tipr_id"]
+                                    "prod_tipr_id" => $datos["prod_tipr_id"],
+                                    "prod_descripcion" => $datos["prod_descripcion"],
+                                    "prod_marca" => $datos["prod_marca"],
+                                    "prod_modelo" => $datos["prod_modelo"],
+                                    "prod_especificaciones" => $datos["prod_especificaciones"],
+                                    "prod_ubicacion" => $datos["prod_ubicacion"]
                                 );
                                 $model = new ProductoModel();
                                 $producto = $model -> insert($datos);
@@ -175,7 +190,12 @@ class Producto extends Controller{
                         $validation -> setRules([
                             "prod_nombre" => 'required|string|max_length[255]',
                             "prod_codigoinventario" => 'required|integer',
-                            "prod_tipr_id" => 'required|integer'
+                            "prod_tipr_id" => 'required|integer',
+                            //"prod_descripcion" => 'required|string|max_length[255]',
+                            //"prod_marca" => 'required|string|max_length[100]',
+                            //"prod_modelo" => 'required|string|max_length[100]',
+                            //"prod_especificaciones" => 'required|string|max_length[255]',
+                            //"prod_ubicacion" => 'required|string|max_length[255]'
                         ]);
                         $validation -> withRequest($this -> request) -> run();
                         if($validation -> getErrors()){
@@ -198,7 +218,12 @@ class Producto extends Controller{
                                 $datos = array(
                                     "prod_nombre" => $datos["prod_nombre"],
                                     "prod_codigoinventario" => $datos["prod_codigoinventario"],
-                                    "prod_tipr_id" => $datos["prod_tipr_id"]
+                                    "prod_tipr_id" => $datos["prod_tipr_id"],
+                                    "prod_descripcion" => $datos["prod_descripcion"],
+                                    "prod_marca" => $datos["prod_marca"],
+                                    "prod_modelo" => $datos["prod_modelo"],
+                                    "prod_especificaciones" => $datos["prod_especificaciones"],
+                                    "prod_ubicacion" => $datos["prod_ubicacion"]
                                 );
                                 $model = new ProductoModel();
                                 $producto = $model -> update($id, $datos);

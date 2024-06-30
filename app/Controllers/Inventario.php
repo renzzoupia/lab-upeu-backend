@@ -107,7 +107,8 @@ class Inventario extends Controller{
                             "inve_prod_id" => $request -> getVar("inve_prod_id"),
                             "inve_cantidad_disponible" => $request -> getVar("inve_cantidad_disponible"),
                             "inve_labo_id" => $request -> getVar("inve_labo_id"),
-                            "inve_fecha" => $request -> getVar("inve_fecha")
+                            "inve_fecha" => $request -> getVar("inve_fecha"),
+                            "inve_cantidad_entrada" => $request -> getVar("inve_cantidad_entrada")
                         );
 
                         if(!empty($datos)){
@@ -116,7 +117,8 @@ class Inventario extends Controller{
                                 "inve_prod_id" => 'required|integer',
                                 "inve_cantidad_disponible" => 'required|integer',
                                 "inve_labo_id" => 'required|integer',
-                                "inve_fecha" => 'required|date'
+                                "inve_fecha" => 'required|date',
+                                //"inve_cantidad_entrada" => 'required|integer',
                             ]);
                             $validation -> withRequest($this -> request) -> run();
                             if($validation -> getErrors()){
@@ -132,7 +134,8 @@ class Inventario extends Controller{
                                     "inve_prod_id" => $datos["inve_prod_id"],
                                     "inve_cantidad_disponible" => $datos["inve_cantidad_disponible"],
                                     "inve_labo_id" => $datos["inve_labo_id"],
-                                    "inve_fecha" => $datos["inve_fecha"]
+                                    "inve_fecha" => $datos["inve_fecha"],
+                                    "inve_cantidad_entrada" => $datos["inve_cantidad_entrada"]
                                 );
                                 $model = new InventarioModel();
                                 $inventario = $model -> insert($datos);
@@ -183,7 +186,8 @@ class Inventario extends Controller{
                             "inve_prod_id" => 'required|integer',
                             "inve_cantidad_disponible" => 'required|integer',
                             "inve_labo_id" => 'required|integer',
-                            "inve_fecha" => 'required|date'
+                            "inve_fecha" => 'required|date',
+                            //"inve_cantidad_entrada" => 'required|integer',
                         ]);
                         $validation -> withRequest($this -> request) -> run();
                         if($validation -> getErrors()){
@@ -208,7 +212,8 @@ class Inventario extends Controller{
                                     "inve_prod_id" => $datos["inve_prod_id"],
                                     "inve_cantidad_disponible" => $datos["inve_cantidad_disponible"],
                                     "inve_labo_id" => $datos["inve_labo_id"],
-                                    "inve_fecha" => $datos["inve_fecha"]
+                                    "inve_fecha" => $datos["inve_fecha"],
+                                    "inve_cantidad_entrada" => $datos["inve_cantidad_entrada"]
                                 );
                                 $model = new InventarioModel();
                                 $inventario = $model -> update($id, $datos);

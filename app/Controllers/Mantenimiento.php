@@ -107,13 +107,15 @@ class Mantenimiento extends Controller{
                             "mant_fechainicio" => $request -> getVar("mant_fechainicio"),
                             "mant_fechadevolucion" => $request -> getVar("mant_fechadevolucion"),
                             "mant_resultado" => $request -> getVar("mant_resultado"),
-                            "mant_estado" => $request -> getVar("mant_estado")
+                            "mant_estado" => $request -> getVar("mant_estado"),
+                            "mant_cantidad" => $request -> getVar("mant_cantidad")
                         );
                         if(!empty($datos)){
                             $validation -> setRules([
                                 "mant_inve_id" => 'required|integer',
                                 "mant_fechainicio" => 'required|date',
                                 "mant_fechadevolucion" => 'required|date',
+                                "mant_cantidad" => 'required|integer'
                                 //"mant_resultado" => 'required|string|max_length[255]',
                                 //"mant_estado" => 'required|string|max_length[50]'
                             ]);
@@ -131,7 +133,8 @@ class Mantenimiento extends Controller{
                                     "mant_fechainicio" => $datos["mant_fechainicio"],
                                     "mant_fechadevolucion" => $datos["mant_fechadevolucion"],
                                     "mant_resultado" => $datos["mant_resultado"],
-                                    "mant_estado" => $datos["mant_estado"]
+                                    "mant_estado" => $datos["mant_estado"],
+                                    "mant_cantidad" => $datos["mant_cantidad"]
                                 );
                                 $model = new MantenimientoModel();
                                 $curso = $model -> insert($datos);
@@ -181,7 +184,8 @@ class Mantenimiento extends Controller{
                             "mant_fechainicio" => 'required|date',
                             "mant_fechadevolucion" => 'required|date',
                             "mant_resultado" => 'required|string|max_length[255]',
-                            "mant_estado" => 'required|string|max_length[50]'
+                            "mant_estado" => 'required|string|max_length[50]',
+                            "mant_cantidad" => 'required|integer',
                         ]);
                         $validation -> withRequest($this -> request) -> run();
                         if($validation -> getErrors()){
@@ -206,7 +210,8 @@ class Mantenimiento extends Controller{
                                     "mant_fechainicio" => $datos["mant_fechainicio"],
                                     "mant_fechadevolucion" => $datos["mant_fechadevolucion"],
                                     "mant_resultado" => $datos["mant_resultado"],
-                                    "mant_estado" => $datos["mant_estado"]
+                                    "mant_estado" => $datos["mant_estado"],
+                                    "mant_cantidad" => $datos["mant_cantidad"]
                                 );
                                 $model = new MantenimientoModel();
                                 $mantenimiento = $model -> update($id, $datos);

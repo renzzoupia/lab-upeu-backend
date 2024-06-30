@@ -10,7 +10,8 @@ class MantenimientoModel extends Model{
         'mant_fechainicio',
         'mant_fechadevolucion',
         'mant_resultado',
-        'mant_estado'
+        'mant_estado',
+        'mant_cantidad'
     ];
     public function getMantenimiento(){
         return $this -> db -> table('mantenimiento m')

@@ -9,7 +9,12 @@ class ProductoModel extends Model{
         'prod_nombre',
         'prod_codigoinventario',
         'prod_tipr_id',
-        'prod_estado'
+        'prod_estado',
+        'prod_descripcion',
+        'prod_marca',
+        'prod_modelo',
+        'prod_especificaciones',
+        'prod_ubicacion'
     ];
 
     public function getProducto(){
